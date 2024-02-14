@@ -25,6 +25,22 @@ h1 {
   color: #bdda57;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.start,
+.stop {
+  background-image: linear-gradient(#bdda57, #ADDFAD);
+  border: 1px solid #ADDFAD;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 48px;
+}
+
 canvas {
   background: url('/src/images/grass.jpg');
   background-repeat: no-repeat;
