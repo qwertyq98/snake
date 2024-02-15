@@ -9,6 +9,10 @@
   
 Игру можно поставить на паузу и потом возобновить. Если змейка врезается в себя или врезается в стену (на режиме hard), показывается финальный счет и "game over"
 
-![Основной экран игры](https://github.com/qwertyq98/snake/raw/master/src/images/1.png)
+### Основной экран игры
 
-![Результат](https://github.com/qwertyq98/snake/raw/master/src/images/2.png)
+![Основной экран игры](./src/images/1.png)
+
+### Результат
+
+![Результат](./src/images/2.png)
