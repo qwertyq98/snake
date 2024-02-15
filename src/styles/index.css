@@ -1,6 +1,6 @@
 :root {
-  font-family: Bradley Hand, cursive;
-  line-height: 1.5;
+  font-family: "Caveat", cursive;
+  line-height: 1.1;
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
@@ -24,6 +24,9 @@ body {
 
 h1 {
   color: #bdda57;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0;
 }
 
 .content {
@@ -40,9 +43,9 @@ h1 {
   cursor: pointer;
   width: 100px;
   height: 48px;
-  font-family: Bradley Hand, cursive;
+  font-family: "Caveat", cursive;
   line-height: 1.5;
-  font-size: medium;
+  font-size: 25px;
   color: #bdda57;
   display: block;
   transition: background .5s ease;
@@ -60,7 +63,7 @@ h1 {
 
 .score {
   text-align: center;
-  font-size: x-large;
+  font-size: 30px;
 }
 
 .speeds {
@@ -69,6 +72,7 @@ h1 {
   padding: 0;
   list-style-type: none;
   align-items: center;
+  margin: 30px auto 0;
 }
 
 .speed {
@@ -81,16 +85,15 @@ h1 {
   cursor: pointer;
   width: 80px;
   height: 30px;
-  font-family: Bradley Hand, cursive;
+  font-family: "Caveat", cursive;
   line-height: 1.5;
-  font-size: medium;
+  font-size: 22px;
   color: #bdda57;
 }
 
 .active {
   background: rgb(173, 223, 173, 0.2);
 }
-
 
 canvas {
   background: url('../images/grass.jpg');
@@ -108,13 +111,13 @@ canvas {
   height: 410px;
   border-radius: 10px;
   overflow: hidden;
-  margin: 30px auto;
+  margin: 50px auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;  
   font-size: 24px;
   position: relative;
-  font-family: 'Roboto', sans-serif; 
+  font-family: "Caveat", cursive; 
   --sq-color: linear-gradient(#ADDFAD, #ADDFAD), linear-gradient(#bdda57, #bdda57), linear-gradient(#ADDFAD, #ADDFAD), linear-gradient(#bdda57, #bdda57);
 }
 
