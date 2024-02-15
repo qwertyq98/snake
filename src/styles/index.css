@@ -3,8 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+  background: #121212;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +19,7 @@ body {
   justify-content: center;
   margin: 0 auto;
   height: 100vh;
+  background: #121212;
 }
 
 h1 {
@@ -33,23 +34,74 @@ h1 {
 
 .start,
 .stop {
-  background-image: linear-gradient(#bdda57, #ADDFAD);
-  border: 1px solid #ADDFAD;
+  background: transparent;
+  border: 2px solid #bdda57;
   border-radius: 10px;
   cursor: pointer;
   width: 100px;
   height: 48px;
+  font-family: Bradley Hand, cursive;
+  line-height: 1.5;
+  font-size: medium;
+  color: #bdda57;
+  display: block;
+  transition: background .5s ease;
+} 
+
+.stop:hover, 
+.start:hover,
+.speed:hover {
+  background: rgb(173, 223, 173, 0.2);
 }
 
+.stop {
+  display: none;
+}
+
+.score {
+  text-align: center;
+  font-size: x-large;
+}
+
+.speeds {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+  align-items: center;
+}
+
+.speed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid #bdda57;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  font-family: Bradley Hand, cursive;
+  line-height: 1.5;
+  font-size: medium;
+  color: #bdda57;
+}
+
+.active {
+  background: rgb(173, 223, 173, 0.2);
+}
+
+
 canvas {
-  background: url('/src/images/grass.jpg');
+  background: url('../images/grass.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0px 0px 24px 6px rgba(121,  159,  75, 0.3); 
   border-radius: 8px;
 }
 
-.border {
+.border,
+.border-red {
   position: relative;
   z-index: 0;
   width: 410px;
@@ -61,7 +113,41 @@ canvas {
   align-items: center;
   justify-content: center;  
   font-size: 24px;
+  position: relative;
   font-family: 'Roboto', sans-serif; 
+  --sq-color: linear-gradient(#ADDFAD, #ADDFAD), linear-gradient(#bdda57, #bdda57), linear-gradient(#ADDFAD, #ADDFAD), linear-gradient(#bdda57, #bdda57);
+}
+
+.border-red {
+  --sq-color: linear-gradient(#d12527, #d12527), linear-gradient(#fa700d, #fa700d), linear-gradient(#d12527, #d12527), linear-gradient(#fa700d, #a15f5d);
+}
+
+.container__finish-game {
+  position: absolute;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: #121212;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  border: 2px solid #bdda57;
+  border-radius: 12px;
+}
+
+.finish-score {
+  color: #bdda57;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.finish-game {
+  color: #bdda57;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 40px;
+  margin: 0 auto;
 }
 
 .border::before {
@@ -76,7 +162,7 @@ canvas {
   background-repeat: no-repeat;
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: linear-gradient(#ADDFAD, #ADDFAD), linear-gradient(#bdda57, #bdda57), linear-gradient(#ADDFAD, #ADDFAD), linear-gradient(#bdda57, #bdda57);
+  background-image: var(--sq-color);
   animation: anim-border 4s linear infinite;
 }
 .border::after {

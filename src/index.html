@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./images/vector/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Snake</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="content">
+        <h1>...Snake 🐍</h1>
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+      </div>
+      <div class="border">
+        <canvas id="game" width="400" height="400"></canvas>
+        <div class="container__finish-game">
+          <p class="finish-game">game over</p>
+          <p class="finish-score"></p>
+        </div>
+      </div>
+      <div class="score"></div>
+      <ul class="speeds">
+        <li class="speed speed_low">low</li>
+        <li class="speed speed_medium">medium</li>
+        <li class="speed speed_hard">hard</li>
+      </ul>
+    </div>
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>
