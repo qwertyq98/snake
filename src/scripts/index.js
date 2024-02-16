@@ -127,6 +127,9 @@ function loop() {
       return;
     }
     count = 0;
+    if (conutrOfPress > 1) {
+      prevButton = '';
+    }
     conutrOfPress = 0;
     context.clearRect(0, 0, canvas.width, canvas.height);
     snake.x += snake.dx;
