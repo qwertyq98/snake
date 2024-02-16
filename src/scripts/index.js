@@ -6,6 +6,8 @@ let count = 0;
 let scorePoints = 0;
 let myReq;
 let mode = 'low';
+let conutrOfPress = 0;
+let prevButton = '';
 const startButton = document.querySelector('.start');
 const stopButton = document.querySelector('.stop');
 const score = document.querySelector('.score');
@@ -125,6 +127,7 @@ function loop() {
       return;
     }
     count = 0;
+    conutrOfPress = 0;
     context.clearRect(0, 0, canvas.width, canvas.height);
     snake.x += snake.dx;
     snake.y += snake.dy;
@@ -159,26 +162,35 @@ function loop() {
   }
 
 document.addEventListener('keydown', function (e) {
+  if (prevButton === e.key) {
+    return;
+  } else {
+    prevButton = e.key;
+    conutrOfPress++;
+  }
+
   // Стрелка влево
   // Если нажата стрелка влево, и при этом змейка никуда не движется по горизонтали…
-  if (e.key === 'ArrowLeft' && snake.dx === 0) {
+  if (conutrOfPress === 1) {
+    if (e.key === 'ArrowLeft' && snake.dx === 0) {
       snake.dx = -grid;
       snake.dy = 0;
-  }
-  // Стрелка вверх
-  else if (e.key === 'ArrowUp' && snake.dy === 0) {
+    }
+    // Стрелка вверх
+    else if (e.key === 'ArrowUp' && snake.dy === 0) {
       snake.dy = -grid;
       snake.dx = 0;
-  }
-  // Стрелка вправо
-  else if (e.key === 'ArrowRight' && snake.dx === 0) {
+    }
+    // Стрелка вправо
+    else if (e.key === 'ArrowRight' && snake.dx === 0) {
       snake.dx = grid;
       snake.dy = 0;
-  }
-  // Стрелка вниз
-  else if (e.key === 'ArrowDown' && snake.dy === 0) {
+    }
+    // Стрелка вниз
+    else if (e.key === 'ArrowDown' && snake.dy === 0) {
       snake.dy = grid;
       snake.dx = 0;
+    }
   }
 });
 
