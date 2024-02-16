@@ -1,5 +1,7 @@
+@import '../fonts/fonts.css';
+
 :root {
-  font-family: "Caveat", cursive;
+  font-family: 'Bradley Hand';
   line-height: 1.1;
   font-weight: 400;
 
@@ -24,8 +26,8 @@ body {
 
 h1 {
   color: #bdda57;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 40px;
+  line-height: 40px;
   margin: 0;
 }
 
@@ -43,9 +45,9 @@ h1 {
   cursor: pointer;
   width: 100px;
   height: 48px;
-  font-family: "Caveat", cursive;
+  font-family: 'Bradley Hand';
   line-height: 1.5;
-  font-size: 25px;
+  font-size: 22px;
   color: #bdda57;
   display: block;
   transition: background .5s ease;
@@ -85,9 +87,9 @@ h1 {
   cursor: pointer;
   width: 80px;
   height: 30px;
-  font-family: "Caveat", cursive;
+  font-family: 'Bradley Hand';
   line-height: 1.5;
-  font-size: 22px;
+  font-size: 18px;
   color: #bdda57;
 }
 
@@ -111,13 +113,13 @@ canvas {
   height: 410px;
   border-radius: 10px;
   overflow: hidden;
-  margin: 50px auto 20px;
+  margin: 40px auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;  
   font-size: 24px;
   position: relative;
-  font-family: "Caveat", cursive; 
+  font-family: 'Bradley Hand'; 
   --sq-color: linear-gradient(#ADDFAD, #ADDFAD), linear-gradient(#bdda57, #bdda57), linear-gradient(#ADDFAD, #ADDFAD), linear-gradient(#bdda57, #bdda57);
 }
 
